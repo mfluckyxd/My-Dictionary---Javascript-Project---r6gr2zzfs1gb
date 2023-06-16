@@ -1,1 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
 
+body {
+  background-color: rgb(42, 7, 75);
+  color: rgb(202, 199, 194);
+}
+
+
+.heading {
+  text-align: center;
+  margin-top: 25vh;
+
+}
+.heading h3 {
+  font-family: monospace;
+  font-size: 30px;
+
+}
+
+
+#container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* #container p {
+    font-size: 18px;
+    margin-bottom: 10px;
+  } */
+.input-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+#search-input {
+  padding: 5px;
+  font-size: 16px;
+  width: 200px;
+  margin-right: 10px;
+  background-color: #5b1baf83;
+  border-radius: 8px;
+}
+
+#search-btn {
+  padding: 5px 10px;
+  font-size: 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#history-btn {
+  padding: 5px 10px;
+  font-size: 16px;
+  background-color: #008CBA;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+#search-btn:active,
+#history-btn:active {
+  background-color: #ccc;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  transition: background-color 0s, box-shadow 0s;
+}
+
+
+.word-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5vh;
+}
+
+.wordCard {
+  width: 200px;
+  background-color: #884eb8;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.wordCard h3 {
+  padding: 10px;
+  background-color: #701bab;
+  border-radius: 4px;
+  font-size: 23px;
+}
+.wordCard p {
+  padding: 10px;
+  background-color: #743374;
+  border-radius: 7px;
+  margin-top: 5px;
+}
+
+.delete-btn {
+  background-color: transparent;
+  color: rgb(44, 18, 18);
+  text-align: center;
+  margin: 5px;
+  padding: 10px 25px 10px 24px;
+  border: none;
+  border-bottom: 1px solid black;
+  cursor: pointer;
+}
+.delete-btn:active {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  transition: background-color 0s, box-shadow 0s;
+}
+.delete-btn:hover {
+  background-color: rgba(159, 126, 190, 0.514);
+}
+
+
+.historyTable {
+  border-collapse: collapse;
+  width: 50%;
+  margin: 0 auto;
+}
+@media (max-width: 650px) {
+  .historyTable {
+    width: 100%;
+  }
+}
+
+.historyTable td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid rgb(141, 141, 180);
+}
+
+.historyTable button {
+  padding: 5px 10px;
+  font-size: 16px;
+  background-color: transparent;
+  color: rgb(212, 87, 87);
+  border: none;
+  cursor: pointer;
+}
+.historyTable button:active {
+  background-color: #ccc;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  transition: background-color 0s, box-shadow 0s;
+}
+.historyTable button:hover{
+  background-color: rgba(145, 65, 219, 0.418);
+}

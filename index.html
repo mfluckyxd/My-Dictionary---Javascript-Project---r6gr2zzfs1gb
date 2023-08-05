@@ -7,21 +7,25 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="heading">
-        <h3>Unleash the Power of Words, at WordWizard</h3>
-    </div>
-    <div id="container">
-        <!-- <p>Uncover word definitions quickly</p> -->
-        <div class="input-container">
-            <input type="text" id="search-input" placeholder="Enter a word" onkeydown="handleEnter(event)">
-        </div>
-        <button class="button" id="search-btn" onclick="searchWord()">Search</button>
-        <button class="button" id="history-btn" onclick="showHistory()">History</button>
-    </div>
-    <div class="word-container">
-        
-    </div>
+    <h3 id="logo">WordWizard</h3>
     
+    <div id="page-container" >
+        <div class="heading">
+            <h3>Unleash the Power of Words, at WordWizard</h3>
+        </div>
+        <div id="container">
+            <!-- <p>Uncover word definitions quickly</p> -->
+            <div class="input-container">
+                <input type="text" id="search-input" placeholder="Enter a word" onkeydown="handleEnter(event)">
+            </div>
+            <button class="button" id="search-btn" onclick="searchWord()">Search</button>
+            <button class="button" id="history-btn" onclick="showHistory()">History</button>
+        </div>
+        <div class="word-container">
+
+        </div>
+    </div>
+    <footer>Copyright &copy; 2023</footer>
 
 
     <script src="App.js"></script>

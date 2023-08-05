@@ -81,7 +81,7 @@ body {
 }
 
 .wordCard {
-  width: 200px;
+  width: 400px;
   background-color: #884eb8;
   padding: 10px;
   margin: 10px;
@@ -137,7 +137,7 @@ body {
   border-bottom: 1px solid rgb(141, 141, 180);
 }
 
-.historyTable button {
+.btn-danger {
   padding: 5px 10px;
   font-size: 16px;
   background-color: transparent;
@@ -145,11 +145,27 @@ body {
   border: none;
   cursor: pointer;
 }
-.historyTable button:active {
+.btn-danger:active {
   background-color: #ccc;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
   transition: background-color 0s, box-shadow 0s;
 }
-.historyTable button:hover{
+.btn-danger:hover{
   background-color: rgba(145, 65, 219, 0.418);
+}
+
+
+
+
+
+
+
+.btn-history-search{
+  padding: 5px 10px;
+  font-size: 16px;
+  background-color: transparent;
+  color: rgb(146, 229, 243);
+  border: none;
+  cursor: pointer;
+  
 }

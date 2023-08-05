@@ -1,10 +1,10 @@
 
 let searchHistory = JSON.parse(localStorage.getItem('searchHistory')) || [];
 const wordContainer = document.querySelector('.word-container');
-
+const searchinput = document.getElementById('search-input');
 
 function searchWord() {
-    const searchinput = document.getElementById('search-input');
+    
     const word = searchinput.value.trim()
     if (word === '') {
         const errorMessage = 'Please enter something.'
@@ -78,6 +78,7 @@ function displayWord(wordObj) {
     const wordPara = document.createElement('p');
     wordPara.textContent = wordObj.meaning;
 
+
     const deleteButton = document.createElement('button');
     deleteButton.textContent = 'X';
     deleteButton.className = 'delete-btn';
@@ -114,16 +115,16 @@ function showHistory() {
     searchHistory.forEach((data) => {
         tableHTML += `
         <tr>
-            <td>${data.word}</td>
+            <td><button onclick="searchFromHistory('${data.word}')" class="btn-history-search">${data.word}</button></td>
             <td>${data.meaning}</td>
-            <td><button onclick="deleteFromHistory(this,'${data.word}')">X</button></td>
+            <td><button class="btn-danger" onclick="deleteFromHistory(this,'${data.word}')">X</button></td>
         </tr>
         `
     })
 
 
     const clearAllHistory = `
-    <tr><td><button onclick="clearAllHistory()">Clear History</button></td></tr>
+    <tr><td><button class="btn-danger" onclick="clearAllHistory()">Clear History</button></td></tr>
     `
     tableHTML += clearAllHistory;
     historyTable.innerHTML = tableHTML;
@@ -146,4 +147,10 @@ function clearAllHistory() {
     wordContainer.textContent = '';
     searchHistory = [];
     saveSearchHistory();
+}
+
+function searchFromHistory(word) {
+    searchinput.value = word;
+    searchWord()
+    
 }

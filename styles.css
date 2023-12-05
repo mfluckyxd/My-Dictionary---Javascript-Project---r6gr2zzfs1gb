@@ -10,7 +10,8 @@ body {
   height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center
+  align-items: center;
+  backdrop-filter: blur(6px);
   
 }
 
@@ -210,5 +211,6 @@ footer{
   background-color: #cccccc65;
   color: #200f29;
   font-weight: bold;
+  z-index:2;
 
 }
